@@ -1,3 +1,9 @@
+# Approach 1 :
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return ' '.join(s.split()[::-1])
+
+# Approach 2 :
 class Solution:
     def reverseWords(self, s: str) -> str:
         n=len(s)
