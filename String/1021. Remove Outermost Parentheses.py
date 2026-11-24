@@ -15,5 +15,21 @@ class Solution:
             
         return ''.join(ans)
 
-
+#Approach 2 :
+class Solution:
+    def removeOuterParentheses(self, s: str) -> str:
+        ans=list()
+        st=list()
+        for ch in s :
+            if ch=='(' :
+                if st :
+                    ans.append(ch)
+                st.append(ch)   
+            else :
+                st.pop()
+                if st:
+                    ans.append(ch)
+                
+        return ''.join(ans)
+        
         
